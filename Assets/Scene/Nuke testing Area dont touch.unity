@@ -240,7 +240,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 511941787}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -274, y: 62.5, z: 0}
+  m_LocalPosition: {x: -229.6, y: 62.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 522731133}
@@ -248,8 +248,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 80, y: -57}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 124.4, y: -57}
+  m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &522731128
 GameObject:
@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5580c8aaa8d5d7345930c3befaec0cde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 30
+  timeLeft: 15
   currentTime: 0
   timerCountDown: {fileID: 511941788}
   timeBar: {fileID: 1875724055}
@@ -522,7 +522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.75735295, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.36764705, g: 0.36764705, b: 0.36764705, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -590,7 +590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.89680535, g: 0.99264705, b: 0, a: 1}
+  m_Color: {r: 0.82769364, g: 0.83823526, b: 0.07396196, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

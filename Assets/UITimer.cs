@@ -28,7 +28,7 @@ public class UITimer : MonoBehaviour {
         if (timeLeft <= 0)
             {
                 StopCoroutine("TurnOver");
-                timerCountDown.text = "Out of Time!";
+                timerCountDown.text = "Out of Time! Switch Oger";
             }
 
         timeBar.maxValue = currentTime;
