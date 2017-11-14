@@ -31,8 +31,8 @@ public class UITimer : MonoBehaviour {
                 timerCountDown.text = "Out of Time!";
             }
 
-        //timeBar.maxValue = currentTime.timeLeft;
-        //timeBar.value = timeLeft.currentTime;
+        timeBar.maxValue = currentTime;
+        timeBar.value = timeLeft;
 
     }
 

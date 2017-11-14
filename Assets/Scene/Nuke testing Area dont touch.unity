@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5580c8aaa8d5d7345930c3befaec0cde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 10
+  timeLeft: 30
   currentTime: 0
   timerCountDown: {fileID: 511941788}
   timeBar: {fileID: 1875724055}
