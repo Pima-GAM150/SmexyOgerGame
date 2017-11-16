@@ -8,10 +8,11 @@ public class UITimer : MonoBehaviour {
     public int timeLeft = 10;
     public int currentTime;
     public Text timerCountDown;
-    public Slider timeBar;
+    public Slider timeBarP1;
+    public Slider timeBarP2;
+    public Transform turnOverUI;
 
-
-        // Use this for initialization
+    // Use this for initialization
     void Start()
     {
         currentTime = timeLeft;
@@ -19,22 +20,29 @@ public class UITimer : MonoBehaviour {
 
     }
 
-        // Update is called once per frame
+    // Update is called once per frame
     void Update()
-        {
+    {
 
-        timerCountDown.text = ("Time: " + timeLeft);
+        timerCountDown.text = ("Time Left: " + timeLeft);
 
         if (timeLeft <= 0)
+        {
+            StopCoroutine("TurnOver");
+            timerCountDown.text = "Out of Time! Switch Oger";
+            if (turnOverUI.gameObject.activeInHierarchy == false)
             {
-                StopCoroutine("TurnOver");
-                timerCountDown.text = "Out of Time! Switch Oger";
+                turnOverUI.gameObject.SetActive(true);
             }
+            
+        }
 
-        timeBar.maxValue = currentTime;
-        timeBar.value = timeLeft;
+        timeBarP1.maxValue = currentTime;
+            timeBarP1.value = timeLeft;
+            timeBarP2.maxValue = currentTime;
+            timeBarP2.value = timeLeft;
 
-    }
+        }
 
         IEnumerator TurnOver()
         {
@@ -45,3 +53,4 @@ public class UITimer : MonoBehaviour {
             }
         }
     }
+
