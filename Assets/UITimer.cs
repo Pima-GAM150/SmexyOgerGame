@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+// Alex's script so fk off dont touch! i beleib i do good
 public class UITimer : MonoBehaviour {
 
-    public float startTime = 10;
-    private float TimeLeft;    
+    private float startTime;
+    private float TimeLeft;
+    public PlayerSettings playerSet;
+
     public Text timerCountDown;
     public Slider timeBarP1;
     public Slider timeBarP2;
@@ -15,17 +17,36 @@ public class UITimer : MonoBehaviour {
     public GameObject player1UI;
     public GameObject player2UI;
 
+    private bool firstRun;
+
     // Use this for initialization
     void Start()
     {
         // setting timer
-        TimeLeft = startTime;
         
+
+        PlayerSettings shorter = playerSet.GetComponent<PlayerSettings>();
+
+        //line below is for testing if first turn timer will work. delete later.
+        playerSet.setTimerFirstEnabled(true);
+
+        if (shorter.getTimerFirstEnabled())
+        {
+            startTime = shorter.getTimerFirst();
+            firstRun = true;
+            
+        }
+        else
+            startTime = shorter.getTimer();
+            TimeLeft = startTime;
     }
 
     // Update is called once per frame
     void Update()
     {//setting up a start text to begin the game that way timer does not start right away
+
+        PlayerSettings shorter = playerSet.GetComponent<PlayerSettings>();
+                
         if (startText.gameObject.activeInHierarchy == true)
         {
             Time.timeScale = 0;
@@ -51,8 +72,16 @@ public class UITimer : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.Space))//this starts next round and restarts the time
             {
                 turnOverUI.gameObject.SetActive(false);
-                Time.timeScale = 1;
+                if (firstRun == true)
+                {
+                    startTime = shorter.getTimerFirst();
+                    firstRun = false;
+                }
+                else
+                    startTime = shorter.getTimer();
+
                 TimeLeft = startTime;
+                Time.timeScale = 1;
 
                 // switches timer bar back forth between player turns
 
