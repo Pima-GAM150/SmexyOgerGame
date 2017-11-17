@@ -10,6 +10,7 @@ public class Example : MonoBehaviour {
     /*the type of variable is the name of the script. Instead of int or string, etc.
     make it public. In Unity you'll drag the 'PlayerSettings' object onto this script to make that connection.
     you can see that on the Example Object in the main scene*/
+    //
     public PlayerSettings settings;
 
     void Function () {
