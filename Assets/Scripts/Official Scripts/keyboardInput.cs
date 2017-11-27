@@ -14,6 +14,7 @@ public class keyboardInput : MonoBehaviour {
 
         CheckWASDMovement();
         CheckArrowMovement();
+        CheckRotation();
 
     }
 
@@ -70,6 +71,19 @@ public class keyboardInput : MonoBehaviour {
         {
             gameObject.transform.Translate(new Vector3(0, 0, -1) * 6 * Time.deltaTime);
             //animator.SetBool("isMoving", true);  <- This will be used for the state machine later, so I'll just leave it here.
+        }
+    }
+
+    private void CheckRotation()
+    {
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.DownArrow))
+        {
+            gameObject.transform.Rotate(new Vector3(0, 1 * 30 * Time.deltaTime, 0));
+        }
+
+        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.UpArrow))
+        {
+            gameObject.transform.Rotate(new Vector3(0, -1 * 30 * Time.deltaTime, 0));
         }
     }
 }
