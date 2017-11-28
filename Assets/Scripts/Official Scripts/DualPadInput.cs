@@ -2,24 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JoyPadInput : MonoBehaviour {
+public class DualPadInput : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    float leftJoystickMovementX;
+    float leftJoystickMovementY;
+    float rightJoystickMovementX;
+    float rightJoystickMovementY;
 
-        float leftJoystickMovementX = Input.GetAxis("Joy1_LeftXAxis");
-        float leftJoystickMovementY = Input.GetAxis("Joy1_LeftYAxis");
-        float rightJoystickMovementX = Input.GetAxis("Joy1_RightXAxis");
-        float rightJoystickMovementY = Input.GetAxis("Joy1_RightYAxis");
+    // Use this for initialization
+    void Start()
+    {
 
+    }
 
+    // Update is called once per frame
+    void Update()
+    {
 
+        leftJoystickMovementX = Input.GetAxis("Joy1_LeftXAxis");
+        leftJoystickMovementY = Input.GetAxis("Joy1_LeftYAxis");
+        rightJoystickMovementX = Input.GetAxis("Joy1_RightXAxis");
+        rightJoystickMovementY = Input.GetAxis("Joy1_RightYAxis");
 
+        CheckLeftStickMovement();
+        CheckRightStickMovement();
+
+    }
+
+    private void CheckLeftStickMovement()
+    {
         //Moves the player character according to X axis movement on the left joystick.
         if (leftJoystickMovementX < 0)
         {
@@ -46,8 +57,10 @@ public class JoyPadInput : MonoBehaviour {
             gameObject.transform.Translate(new Vector3(0, 0, leftJoystickMovementY) * 6 * Time.deltaTime);
             //animator.SetBool("isMoving", true);  <- This will be used for the state machine later, so I'll just leave it here.
         }
+    }
 
-
+    private void CheckRightStickMovement()
+    {
         //For the right joystick (placeholder for controller 2's left joystick for ease of testing)
 
 
@@ -76,7 +89,5 @@ public class JoyPadInput : MonoBehaviour {
             gameObject.transform.Translate(new Vector3(0, 0, rightJoystickMovementY) * 6 * Time.deltaTime);
             //animator.SetBool("isMoving", true);  <- This will be used for the state machine later, so I'll just leave it here.
         }
-
-
     }
 }
