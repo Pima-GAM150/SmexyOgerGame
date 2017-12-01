@@ -10,22 +10,39 @@ public class TimeChangeOption : MonoBehaviour {
     public Text timeSet;
     public Slider timeBar;
 
+    private int setTime;
+    private int timeChange;
+    private int minTime;
+
 
 	// Use this for initialization
 	void Start () {
 
-        PlayerSettings shorter = timerSet.GetComponent<PlayerSettings>();
-
-
+        //PlayerSettings shorter = timerSet.GetComponent<PlayerSettings>();
+        //setTime = shorter.getTimer();
+        //timeChange = setTime;
+        setTime = timerSet.getTimer();
+        timeChange = 45;
+        timeBar.minValue = timerSet.getTimer();
     }
 	
 	// Update is called once per frame
 	void Update () {
 
-        PlayerSettings shorter = timerSet.GetComponent<PlayerSettings>();
 
+        //minTime = shorter.getTimer();
 
-        timeSet.text = ("First Round Time Set: " + timerSet);
+        timeSet.text = ("First Round Time Set: " + setTime);
 
-	}
+        
+        timeBar.maxValue = timeChange;
+        //timeBar.minValue = minTime;
+        timerSet.setTimerFirst(setTime);
+    }
+
+    public void changeTime( float newval ) {
+        setTime = Mathf.RoundToInt( newval );
+    }
+
+    
 }
