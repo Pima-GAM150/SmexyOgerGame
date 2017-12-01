@@ -4,20 +4,22 @@ using UnityEngine;
 
 public class CameraAnimation : MonoBehaviour {
 
-	public Animator animator;
+	public Animator settingsAnimator;
+	public Animator creditsAnimator;
+	public Animator playAnimator;
 
 	public void ClickOnSettings(){
 	
-		animator.SetTrigger ("SettingsClick");
+		settingsAnimator.SetTrigger ("SettingsClick");
 	}
 
 	public void ClickOnCredits(){
 
-		print ("ClickedOnCredits");
+		creditsAnimator.SetTrigger ("CreditsClick");
 	}
 
 	public void ClickOnPlay(){
 
-		print ("ClickedOnPlay");
+		playAnimator.SetTrigger ("PlayClick");
 	}
 }
