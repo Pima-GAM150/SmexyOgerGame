@@ -1,0 +1,156 @@
+fileFormatVersion: 2
+guid: 8ea50f11c416f0849a9a59b0deeff7fb
+timeCreated: 1436033529
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Lake
+    100002: Object2186
+    100004: Object2187
+    100006: Object2189
+    100008: Object2190
+    100010: Object2191
+    100012: water
+    100014: //RootNode
+    100016: WaterFlow001
+    100018: waterhalo3
+    400000: Lake
+    400002: Object2186
+    400004: Object2187
+    400006: Object2189
+    400008: Object2190
+    400010: Object2191
+    400012: water
+    400014: //RootNode
+    400016: WaterFlow001
+    400018: waterhalo3
+    2300000: Lake
+    2300002: Object2186
+    2300004: Object2187
+    2300006: Object2189
+    2300008: Object2190
+    2300010: Object2191
+    2300012: water
+    2300014: //RootNode
+    2300016: WaterFlow001
+    2300018: waterhalo3
+    3300000: Lake
+    3300002: Object2186
+    3300004: Object2187
+    3300006: Object2189
+    3300008: Object2190
+    3300010: Object2191
+    3300012: water
+    3300014: //RootNode
+    3300016: WaterFlow001
+    3300018: waterhalo3
+    4300000: Object2188
+    4300002: water
+    4300004: WaterFlow001
+    4300006: Object2191
+    4300008: Object2187
+    4300010: Object2189
+    4300012: Object2190
+    4300014: Lake
+    4300016: Object2186
+    4300018: waterhalo3
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #163'
+    second: {fileID: 2100000, guid: ba5a68fa69f566241b42be32d1053811, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #185'
+    second: {fileID: 2100000, guid: dd03cfa1550957a40aea776a53d35143, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #381'
+    second: {fileID: 2100000, guid: 57ced91875c7f6a478ed4dd623a42823, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #521'
+    second: {fileID: 2100000, guid: 27bbbfa4afab5564582024b392a6ee26, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 2
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
