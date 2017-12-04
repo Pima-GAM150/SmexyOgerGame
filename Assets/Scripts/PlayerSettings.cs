@@ -19,17 +19,20 @@ public class PlayerSettings : MonoBehaviour {
     private HP P1_R_HP;
     private HP P2_L_HP;
     private HP P2_R_HP;
+    private int P1_Stam;
+    private int P2_Stam;
     //PlayerInventory
-    enum Item { NOTHING, BOULDER, TREE, HUMAN, BOAR }; //list of carried items
+    enum Item { NOTHING, BOULDER, TREE, HUMAN, SHEEP }; //list of carried items
     private Item P1_L_Item;
     private Item P1_R_Item;
     private Item P2_L_Item;
     private Item P2_R_Item;
+    private int currentTeam = 0; //change this after UI change
 
     // Use this for initialization
-    void Start () {
+    void Start() {
         nGame();
-	}
+    }
 
     void nGame() {
         this.P1_L_HP = HP.OKAY;
@@ -40,16 +43,19 @@ public class PlayerSettings : MonoBehaviour {
         this.P1_R_Item = Item.NOTHING;
         this.P2_L_Item = Item.NOTHING;
         this.P2_R_Item = Item.NOTHING;
+        this.P1_Stam = 112;
+        this.P2_Stam = 112;
+        this.currentTeam = 1;
         //TODO
-
+        
         //set player positions
         //tell the level script to initialize level objects
     }
-	
+
     //Methods:
 
     //Timer
-    public int getTimer() {return this.levelTimer;}
+    public int getTimer() { return this.levelTimer; }
     public int getTimerFirst() { return this.levelTimerFirst; }
     public bool getTimerFirstEnabled() { return this.levelTimerFirstEnabled; }
     public void setTimer(int time) {
@@ -99,11 +105,35 @@ public class PlayerSettings : MonoBehaviour {
         if (!(side == 'L' || side == 'R')) throw new System.Exception("Side is limited to 'L' or 'R' in setHP");
         HP character;
         if (player == 1) {
-            character = side == 'L' ? this.P1_L_HP += value: this.P1_R_HP += value;
+            character = side == 'L' ? this.P1_L_HP += value : this.P1_R_HP += value;
         }
         else {
-            character = side == 'L' ? this.P2_L_HP += value: this.P2_R_HP += value;
+            character = side == 'L' ? this.P2_L_HP += value : this.P2_R_HP += value;
         }
         //check if dead
+    }
+    public void setStam(int value) {//checks itself for upper/lower limits
+        if (currentTeam == 1) {
+            this.P1_Stam += value;
+            if (P1_Stam > 112) this.P1_Stam = 112;
+            if (P1_Stam < 0) this.P1_Stam = 0;
+        }
+        else {
+            this.P2_Stam += value;
+            if (P2_Stam > 112) this.P2_Stam = 112;
+            if (P2_Stam < 0) this.P2_Stam = 0;
+        }
+    }
+    public int getStam() {
+        return currentTeam == 1 ? this.P1_Stam : this.P2_Stam;
+    }
+    public void setTeam(int side) {
+        if (!(side == 1 || side == 2)) throw new System.Exception("ERROR: side is limited to 1 or 2");
+        else {
+            this.currentTeam = side;
+        }
+    }
+    public int getTeam() {
+        return this.currentTeam;
     }
 }
