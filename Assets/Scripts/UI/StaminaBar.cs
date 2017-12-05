@@ -9,17 +9,17 @@ public class StaminaBar : MonoBehaviour {
     public Slider StamBar;
     public GameObject StamMax;
     private Vector3 StamMaxScale = new Vector3(1, 0, 0);
-    private float Delay;
-    private int stamina;
-    private int stamMax;
-    private int threshold;
+    private float Delay;//time till next stamina increase
+    private int stamina;//local value of current stamina (resets to maxiumum each turn)
+    private int stamMax;//local value of PlayerSettings Stamina
+    private int threshold;//the value at which stamMax gets lowered
     private bool tired = false; //only allows you to lose stam once while under threshold
 
-    void Start () {
+    void Start () {//this should only run when the game is started
         settings = settings.GetComponent<PlayerSettings>();
         this.stamina = this.stamMax = settings.getStam();
         if (this.stamina > 100) this.stamina = 100;
-        threshold = (int)(this.stamMax * 0.45f);
+        this.threshold = (int)(this.stamMax * 0.45f);
     }
 	void Update () {
         Delay -= Time.deltaTime;

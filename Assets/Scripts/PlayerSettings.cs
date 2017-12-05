@@ -31,10 +31,10 @@ public class PlayerSettings : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-        nGame();
+        //nGame();
     }
 
-    void nGame() {
+    public void nGame() {
         this.P1_L_HP = HP.OKAY;
         this.P1_R_HP = HP.OKAY;
         this.P2_L_HP = HP.OKAY;
@@ -47,7 +47,6 @@ public class PlayerSettings : MonoBehaviour {
         this.P2_Stam = 112;
         this.currentTeam = 1;
         //TODO
-        
         //set player positions
         //tell the level script to initialize level objects
     }

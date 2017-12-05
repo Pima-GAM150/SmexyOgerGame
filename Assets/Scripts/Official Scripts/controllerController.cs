@@ -6,23 +6,24 @@ using UnityEngine.UI;
 public class controllerController : MonoBehaviour {
 
     //Variables for the selection of the player's input.
-    private keyboardInput keyboardInput;
-    private JoyKeyInput joyKeyInput;
-    private DualPadInput dualPadInput;
-    private JoyJoyInput joyJoyInput;
+    public keyboardInput keyboardInput;
+    public JoyKeyInput joyKeyInput;
+    public DualPadInput dualPadInput;
+    public JoyJoyInput joyJoyInput;
     //public static string playerInputMode;
 
 	// Use this for initialization
 	void Start ()
     {
         //sets default controller style
-        joyKeyInput = GetComponent<JoyKeyInput>();
-        keyboardInput = GetComponent<keyboardInput>();
-        dualPadInput = GetComponent<DualPadInput>();
-        joyJoyInput = GetComponent<JoyJoyInput>();
+        //changed from ...Input = GetComponent<...
+        joyKeyInput.GetComponent<JoyKeyInput>();
+        keyboardInput.GetComponent<keyboardInput>();
+        dualPadInput.GetComponent<DualPadInput>();
+        joyJoyInput.GetComponent<JoyJoyInput>();
 
-        keyboardInput.enabled = false;
         joyKeyInput.enabled = false;
+        keyboardInput.enabled = false;
         dualPadInput.enabled = true;
         joyJoyInput.enabled = false;
     }

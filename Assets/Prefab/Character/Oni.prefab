@@ -38,8 +38,8 @@ GameObject:
   - component: {fileID: 4987616824785634}
   - component: {fileID: 114254101354700856}
   - component: {fileID: 114175941273990252}
-  - component: {fileID: 114511648113589872}
   - component: {fileID: 114775094792790718}
+  - component: {fileID: 114511648113589872}
   m_Layer: 0
   m_Name: Oni
   m_TagString: Untagged
@@ -75,7 +75,6 @@ GameObject:
   - component: {fileID: 4412847433578668}
   - component: {fileID: 20115542145170584}
   - component: {fileID: 124419418241009202}
-  - component: {fileID: 81047196389754212}
   m_Layer: 0
   m_Name: HeadCamRight
   m_TagString: Untagged
@@ -222,7 +221,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 3e303dd0bbbfd6e498d237427f2f2f8d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -256,20 +255,13 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1518207948562344}
   m_Enabled: 1
---- !u!81 &81047196389754212
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1615511938012656}
-  m_Enabled: 1
 --- !u!114 &114175941273990252
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1496355238315508}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52bd99513f251254d9faf884a7c3b158, type: 3}
   m_Name: 
@@ -280,7 +272,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1496355238315508}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b31de299c77021f4f857bb190e872547, type: 3}
   m_Name: 
@@ -291,7 +283,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1496355238315508}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce1f8916518d41346b629b431a86c887, type: 3}
   m_Name: 
