@@ -10,18 +10,25 @@ public class controllerController : MonoBehaviour {
     private JoyKeyInput joyKeyInput;
     private DualPadInput dualPadInput;
     private JoyJoyInput joyJoyInput;
-    public static string playerInputMode;
+    //public static string playerInputMode;
 
 	// Use this for initialization
 	void Start ()
     {
+        //sets default controller style
+        joyKeyInput = GetComponent<JoyKeyInput>();
+        keyboardInput = GetComponent<keyboardInput>();
+        dualPadInput = GetComponent<DualPadInput>();
+        joyJoyInput = GetComponent<JoyJoyInput>();
 
+        keyboardInput.enabled = false;
+        joyKeyInput.enabled = false;
+        dualPadInput.enabled = true;
+        joyJoyInput.enabled = false;
     }
 	
 	// Update is called once per frame
-	void Update ()
-    {
-
+	void setInputStyle (string playerInputMode){
         joyKeyInput = GetComponent<JoyKeyInput>();
         keyboardInput = GetComponent<keyboardInput>();
         dualPadInput = GetComponent<DualPadInput>();
