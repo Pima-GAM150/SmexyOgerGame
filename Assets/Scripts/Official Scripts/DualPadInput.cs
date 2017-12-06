@@ -18,7 +18,6 @@ public class DualPadInput : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD:Assets/Scripts/Official Scripts/DualPadInput.cs
 
         leftJoystickMovementX = Input.GetAxis("Joy1_LeftXAxis");
         leftJoystickMovementY = Input.GetAxis("Joy1_LeftYAxis");
@@ -29,7 +28,6 @@ public class DualPadInput : MonoBehaviour {
         CheckRightStickMovement();
         CheckRotation();
 
-=======
 
         leftJoystickMovementX = Input.GetAxis("Joy1_LeftXAxis");
         leftJoystickMovementY = Input.GetAxis("Joy1_LeftYAxis");
@@ -39,7 +37,7 @@ public class DualPadInput : MonoBehaviour {
         CheckLeftStickMovement();
         CheckRightStickMovement();
 
->>>>>>> 33bc46d16fc1abfe6b428063a8a950701da4a054:Assets/Scripts/Official Scripts/DualPadInput.cs
+
     }
 
     private void CheckLeftStickMovement()
@@ -102,7 +100,7 @@ public class DualPadInput : MonoBehaviour {
             gameObject.transform.Translate(new Vector3(0, 0, rightJoystickMovementY) * 6 * Time.deltaTime);
             //animator.SetBool("isMoving", true);  <- This will be used for the state machine later, so I'll just leave it here.
         }
-<<<<<<< HEAD:Assets/Scripts/Official Scripts/DualPadInput.cs
+
     }
 
     private void CheckRotation()
@@ -116,7 +114,6 @@ public class DualPadInput : MonoBehaviour {
         {
             gameObject.transform.Rotate(new Vector3(0, 1 * 30 * Time.deltaTime, 0));
         }
-=======
->>>>>>> 33bc46d16fc1abfe6b428063a8a950701da4a054:Assets/Scripts/Official Scripts/DualPadInput.cs
+
     }
 }
