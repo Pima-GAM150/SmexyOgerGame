@@ -25,7 +25,10 @@ public class JoyJoyInput : MonoBehaviour {
 
         CheckJoyOneMovement();
         CheckJoyTwoMovement();
+<<<<<<< HEAD
         CheckRotation();
+=======
+>>>>>>> 33bc46d16fc1abfe6b428063a8a950701da4a054
 
 
     }
@@ -89,6 +92,7 @@ public class JoyJoyInput : MonoBehaviour {
             //animator.SetBool("isMoving", true);  <- This will be used for the state machine later, so I'll just leave it here.
         }
     }
+<<<<<<< HEAD
 
     private void CheckRotation()
     {
@@ -101,4 +105,6 @@ public class JoyJoyInput : MonoBehaviour {
             gameObject.transform.Rotate(new Vector3(0, 1 * 30 * Time.deltaTime, 0));
         }
     }
+=======
+>>>>>>> 33bc46d16fc1abfe6b428063a8a950701da4a054
 }
