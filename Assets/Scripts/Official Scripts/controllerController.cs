@@ -24,8 +24,8 @@ public class controllerController : MonoBehaviour {
 
         joyKeyInput.enabled = false;
         keyboardInput.enabled = false;
-        dualPadInput.enabled = true;
-        joyJoyInput.enabled = false;
+        dualPadInput.enabled = false;
+        joyJoyInput.enabled = true;
     }
 	
 	// Update is called once per frame

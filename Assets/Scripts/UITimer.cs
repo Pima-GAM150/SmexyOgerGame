@@ -28,19 +28,17 @@ public class UITimer : MonoBehaviour {
         PlayerSettings shorter = playerSet.GetComponent<PlayerSettings>();
 
         //line below is for testing if first turn timer will work. delete later.
-        playerSet.setTimerFirstEnabled(true);
-
+        //playerSet.setTimerFirstEnabled(true);
+        
         if (shorter.getTimerFirstEnabled())
         {
             startTime = shorter.getTimerFirst();
-            firstRun = true;
-            
+            firstRun = true;            
         }
         else
             startTime = shorter.getTimer();
             TimeLeft = startTime;
     }
-
     // Update is called once per frame
     void Update()
     {//setting up a start text to begin the game that way timer does not start right away
