@@ -14,8 +14,13 @@ public class OgreDistance : MonoBehaviour {
 	void Update () {
 		if (Vector3.Distance(human.transform.position,gameObject.transform.position) < 5) {
             human.GetComponentInChildren<FontBehavior>().EnableDisable(true);
+            GetComponent<JoyPadTest>().EnableDisable(true);
             //give permission to controller to pick up human
         }
-        else human.GetComponentInChildren<FontBehavior>().EnableDisable(false);
+        else {
+            human.GetComponentInChildren<FontBehavior>().EnableDisable(false);
+            GetComponent<JoyPadTest>().EnableDisable(false);
+        }
+            
     }
 }
