@@ -33,8 +33,8 @@ public class MenuSelect : MonoBehaviour {
     }
     
     //use to load start game
-    //public void LoadOn()
-    //{
-      //  Application.LoadLevel(put name of scene here);
-    //}
+    public void LoadOn()
+    {
+       Application.LoadLevel (1);
+     }
 }
