@@ -650,7 +650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingsAnimator: {fileID: 1241771753}
-  creditsAnimator: {fileID: 0}
+  creditsAnimator: {fileID: 1241771753}
   playAnimator: {fileID: 0}
 --- !u!95 &1241771753
 Animator:
