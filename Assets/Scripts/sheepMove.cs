@@ -7,6 +7,7 @@ public class sheepMove : MonoBehaviour {
     public float moveSpeed;
 
     private Rigidbody myRigidbody;
+    public Transform sheep;
 
     private bool moving;
 
@@ -19,7 +20,7 @@ public class sheepMove : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+                
         myRigidbody = GetComponent<Rigidbody>();
 
         timeBetweenMoveCounter = Random.Range(timeBetweenMove * 0.75f, timeBetweenMove * 1.25f);
@@ -52,5 +53,8 @@ public class sheepMove : MonoBehaviour {
                 moveDirection = new Vector3(Random.Range(-1f, 1f) * moveSpeed, 0f, Random.Range(-1, 1f) * moveSpeed);
             }
         }
+
+        sheep.LookAt(moveDirection);
+
 	}
 }
