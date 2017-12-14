@@ -23,25 +23,25 @@ public class keyboardInput : MonoBehaviour {
         //Standard Keyboard Input
         if (Input.GetKey(KeyCode.W))
         {
-            gameObject.transform.TransformDirection(new Vector3(1, 0, 0) * 6 * Time.deltaTime);
+            gameObject.transform.Translate(new Vector3(0, 0, 1) * 6 * Time.deltaTime);
             //animator.SetBool("isMoving", true);  <- This will be used for the state machine later, so I'll just leave it here.
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            gameObject.transform.TransformDirection(new Vector3(-1, 0, 0) * 6 * Time.deltaTime);
+            gameObject.transform.Translate(new Vector3(0, 0, -1) * 6 * Time.deltaTime);
             //animator.SetBool("isMoving", true);  <- This will be used for the state machine later, so I'll just leave it here.
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            gameObject.transform.TransformDirection(new Vector3(0, 0, 1) * 6 * Time.deltaTime);
+            gameObject.transform.Translate(new Vector3(1, 0, 1) * 6 * Time.deltaTime);
             //animator.SetBool("isMoving", true);  <- This will be used for the state machine later, so I'll just leave it here.
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            gameObject.transform.TransformDirection(new Vector3(0, 0, -1) * 6 * Time.deltaTime);
+            gameObject.transform.Translate(new Vector3(-1, 0, 0) * 6 * Time.deltaTime);
             //animator.SetBool("isMoving", true);  <- This will be used for the state machine later, so I'll just leave it here.
         }
     }
@@ -51,25 +51,25 @@ public class keyboardInput : MonoBehaviour {
         //Arrow Key Keyboard Input
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            gameObject.transform.TransformDirection(new Vector3(1, 0, 0) * 6 * Time.deltaTime);
+            gameObject.transform.Translate(new Vector3(0, 0, 1) * 6 * Time.deltaTime);
             //animator.SetBool("isMoving", true);  <- This will be used for the state machine later, so I'll just leave it here.
         }
 
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            gameObject.transform.TransformDirection(new Vector3(-1, 0, 0) * 6 * Time.deltaTime);
+            gameObject.transform.Translate(new Vector3(0, 0, -1) * 6 * Time.deltaTime);
             //animator.SetBool("isMoving", true);  <- This will be used for the state machine later, so I'll just leave it here.
         }
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            gameObject.transform.TransformDirection(new Vector3(0, 0, 1) * 6 * Time.deltaTime);
+            gameObject.transform.Translate(new Vector3(1, 0, 0) * 6 * Time.deltaTime);
             //animator.SetBool("isMoving", true);  <- This will be used for the state machine later, so I'll just leave it here.
         }
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            gameObject.transform.TransformDirection(new Vector3(0, 0, -1) * 6 * Time.deltaTime);
+            gameObject.transform.Translate(new Vector3(-1, 0, 0) * 6 * Time.deltaTime);
             //animator.SetBool("isMoving", true);  <- This will be used for the state machine later, so I'll just leave it here.
         }
     }
