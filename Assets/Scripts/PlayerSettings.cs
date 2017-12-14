@@ -28,10 +28,24 @@ public class PlayerSettings : MonoBehaviour {
     private Item P2_L_Item;
     private Item P2_R_Item;
     private int currentTeam = 0; //change this after UI change
+    public GameObject Oni1;
+    public GameObject Oni2;
+    private Vector3 Oni1_Title_T = new Vector3(806.73f, 17.8f, 288.6f);
+    private Vector3 Oni1_Title_R = new Vector3(0f, -10.96f, 0f);
+    private Vector3 Oni1_Start_T = new Vector3(800.7f, 15f, 722.2f);
+    private Vector3 Oni1_Start_R = new Vector3(0f, -171.6f, 0f);
+    private Vector3 Oni2_Title_T = new Vector3(854.6f, 17.8f, 330.4f);
+    private Vector3 Oni2_Title_R = new Vector3(0f, -87.7f, 0f);
+    private Vector3 Oni2_Start_T = new Vector3(292.33f, 15f, 82.2f);
+    private Vector3 Oni2_Start_R = new Vector3(0f, 60.23f, 0f);
 
     // Use this for initialization
     void Start() {
         //nGame();
+        Oni1.transform.position = Oni1_Title_T;
+        Oni1.transform.eulerAngles = Oni1_Title_R;
+        Oni2.transform.position = Oni2_Title_T;
+        Oni2.transform.eulerAngles = Oni2_Title_R;
     }
 
     public void nGame() {
@@ -46,8 +60,11 @@ public class PlayerSettings : MonoBehaviour {
         this.P1_Stam = 112;
         this.P2_Stam = 112;
         this.currentTeam = 1;
+        Oni1.transform.position = Oni1_Start_T;
+        Oni1.transform.eulerAngles = Oni1_Start_R;
+        Oni2.transform.position = Oni2_Start_T;
+        Oni2.transform.eulerAngles = Oni2_Start_R;
         //TODO
-        //set player positions
         //tell the level script to initialize level objects
     }
 
